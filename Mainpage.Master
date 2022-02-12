@@ -1,0 +1,330 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="Mainpage.master.vb" Inherits="NUM_website.Mainpage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    
+    <style type="text/css">
+        .table{
+            width:80%;
+            height:70%;
+            color:white;
+            font-size:20px;
+            margin-top:20px;
+            margin-left:10%;
+        }
+        .auto-style2 {
+            width: 124px;
+        }
+    </style>
+    
+</head>
+<body>
+    <form id="form1" runat="server">
+         <div style="background-color:#3b5d9d; height:40px; width:auto;text-align:center;font-size:medium; color:white;padding-top:10px;">
+             <pre>Skip to Main Content  |  Screen Reader Access                                  Mail Login | Portal Login</pre>
+         </div>
+        <div style="background-color:white;height:160px">
+            <div class="logobox">
+                <asp:Image ID="Image1" runat="server"  ImageUrl="~/Images/logo.jpg" Width="40%"  Height="80%"  ImageAlign="Right" />
+            </div>
+               <div class="logobox" style="width:60%">
+                   <asp:Image ID="Image3" runat="server" ImageUrl="~/Images/nmulogo.PNG" Height="92%" Width="100%" />
+               </div>
+               <div class="logobox">
+                   <asp:Image ID="Image2" runat="server" ImageUrl="~/Images/bhainibai.png" Width="40%"  Height="80%" ImageAlign="Left"/>
+               </div>
+        </div><hr/>
+        <div class="Menudiv">
+            <asp:Menu ID="MainMenue" runat="server" Orientation="Horizontal" >
+                <DynamicMenuItemStyle  CssClass="submenu"/>
+                <DynamicHoverStyle BackColor="#40c2ff" />
+                <DynamicMenuStyle CssClass="Dmenu" BackColor="White" ForeColor="White" />
+                <DynamicSelectedStyle ForeColor="White" />
+                <Items >
+                    <asp:MenuItem Text="Home" Value="Home" NavigateUrl="HOMEPage.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="About Us" Value="About Us">
+                        <asp:MenuItem Text="About University" Value="About University" NavigateUrl="AboutUs.aspx">
+                            <asp:MenuItem Text="Mission &amp; vision" Value="New Item"></asp:MenuItem>
+                            <asp:MenuItem Text="University Song" Value="New Item"></asp:MenuItem>
+                            <asp:MenuItem Text="Information &amp; Glance" Value="New Item"></asp:MenuItem>
+                            <asp:MenuItem Text="Vice Chancellors List" Value="New Item"></asp:MenuItem>
+                            <asp:MenuItem Text="Annual Report" Value="New Item"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Authorities &amp; Committees" Value="Authorities & Commities"></asp:MenuItem>
+                        <asp:MenuItem Text="University Campus" Value="University Campus">
+                            <asp:MenuItem Text="About Campus" Value="New Item"></asp:MenuItem>
+                             <asp:MenuItem Text="Khandesh Archives And Museum Center" Value="New Item"></asp:MenuItem>
+                             <asp:MenuItem Text="Central School" Value="New Item"></asp:MenuItem>
+                             <asp:MenuItem Text="Campus Map" Value="New Item"></asp:MenuItem>
+                             <asp:MenuItem Text="How to Reach" Value="New Item"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Extention Activities" Value="Extention Activities"></asp:MenuItem>
+                        <asp:MenuItem Text="Research Faculties" Value="Research Faculties"></asp:MenuItem>
+                        <asp:MenuItem Text="MoUs" Value="MoUs"></asp:MenuItem>
+                        <asp:MenuItem Text="Satellite Centers" Value="Satellite Centers">
+                            <asp:MenuItem Text="Eklavya Training center, Nandurbar" Value="New Item"></asp:MenuItem>
+                             <asp:MenuItem Text="Pratap P.G. Research center of philosophy" Value="New Item"></asp:MenuItem>
+                             <asp:MenuItem Text="Pratap shashvat Adhunik Sheti Tatvdyan kendra" Value="New Item"></asp:MenuItem>
+                            <asp:MenuItem Text="Mahatma Gandhi philosophy center " Value="New Item"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="RGS &amp; TC" Value="RGS &amp; TC">
+                            <asp:MenuItem Text="RGS &amp; TC schemes" Value="RGS &amp; TC schemes"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Best Practices" Value="Best Fractices">
+                            <asp:MenuItem Text="Lab to land" Value="Lab to land"></asp:MenuItem>
+                            <asp:MenuItem Text="Blood Donation" Value="Blood Donation"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Contact Information" Value="Contact Information"></asp:MenuItem>
+                    </asp:MenuItem>
+                    <asp:MenuItem Text="Academics" Value="Academics">
+                        <asp:MenuItem Text="Schools" Value="New Item">
+                            <asp:MenuItem Text="School of computer Sciences" Value="New Item" NavigateUrl="SOCS.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="School of life sciences" Value="New Item"></asp:MenuItem>
+                            <asp:MenuItem Text="School of chemical sciences" Value="New Item"></asp:MenuItem>
+                            
+                            <asp:MenuItem Text="School of Phisical sciences" Value="New Item"></asp:MenuItem>
+                         <asp:MenuItem Text="  School of Enviromental And Earth Science " Value="New Item" NavigateUrl=""></asp:MenuItem>
+                            <asp:MenuItem Text="School of Mathematical Sciences" Value="New Item"></asp:MenuItem>
+                            
+                            <asp:MenuItem Text="University Institude of Chemical Technology " Value="New Item"></asp:MenuItem>
+                            <asp:MenuItem Text="School of Language studies And Research Center" Value="New Item"></asp:MenuItem>
+                            <asp:MenuItem Text="School of Education" Value="New Item"></asp:MenuItem>
+                            
+                            <asp:MenuItem Text="School of Managment Studies" Value="New Item"></asp:MenuItem>
+                            <asp:MenuItem Text="School of Social Sciences" Value="New Item"></asp:MenuItem>
+                            <asp:MenuItem Text="School of Arts and humanities" Value="New Item"></asp:MenuItem>
+                             <asp:MenuItem Text="School of Thoughts" Value="New Item"></asp:MenuItem>
+                        </asp:MenuItem>
+                           <asp:MenuItem Text="Ph.D." Value="New Item"></asp:MenuItem>
+                           <asp:MenuItem Text="Life Long Learning And Extention Board" Value="New Item">
+                               <asp:MenuItem Text="Board Members" Value="Board Members"></asp:MenuItem>
+                               <asp:MenuItem Text="Courses offered" Value="Courses offered"></asp:MenuItem>
+                        </asp:MenuItem>
+                           <asp:MenuItem Text="Dr. Babasaheb Ambedker 
+                               Competitive Exam Center" Value="New Item"></asp:MenuItem>
+                    </asp:MenuItem>
+                    <asp:MenuItem Text="Administration" Value="Administration">
+                           <asp:MenuItem Text="Registration Office " Value="New Item"></asp:MenuItem>
+                           <asp:MenuItem Text="Administration" Value="New Item"></asp:MenuItem>
+                           <asp:MenuItem Text="Law/RTI Section" Value="New Item"></asp:MenuItem>
+                           <asp:MenuItem Text="FOA Office" Value="New Item"></asp:MenuItem>
+                           <asp:MenuItem Text="Examination and Evaluation section" Value="New Item"></asp:MenuItem>
+                           <asp:MenuItem Text="Eligibility section" Value="New Item"></asp:MenuItem>
+                           <asp:MenuItem Text="Sports Section" Value="New Item"></asp:MenuItem>
+                           <asp:MenuItem Text="SCIST Cell" Value="New Item"></asp:MenuItem>
+                           <asp:MenuItem Text="Counstruction Section " Value="New Item"></asp:MenuItem>
+                           <asp:MenuItem Text="PRO Section" Value="New Item"></asp:MenuItem>
+                           <asp:MenuItem Text="Approval Section" Value="New Item"></asp:MenuItem>
+                           <asp:MenuItem Text="Computer center " Value="New Item"></asp:MenuItem>
+                           <asp:MenuItem Text="Health Center" Value="New Item"></asp:MenuItem>
+                           <asp:MenuItem Text="University Officers" Value="New Item"></asp:MenuItem>
+                           <asp:MenuItem Text="Phone Directory" Value="New Item"></asp:MenuItem>
+                    </asp:MenuItem>
+                    <asp:MenuItem Text="Research and development" Value="Research and development">
+                           <asp:MenuItem Text="Functioning of  R &amp; D Section" Value="New Item"></asp:MenuItem>
+                           <asp:MenuItem Text="Development Section" Value="New Item"></asp:MenuItem>
+                           <asp:MenuItem Text="Afiliation Section" Value="New Item">
+                               <asp:MenuItem Text="Onine Affiliation" Value="Onine Affiliation"></asp:MenuItem>
+                               <asp:MenuItem Text="L.I.C Reports" Value="L.I.C Reports"></asp:MenuItem>
+                           </asp:MenuItem>
+                           <asp:MenuItem Text="Internal Quality Assurance Cell(IQAC)" Value="New Item"></asp:MenuItem>
+                           <asp:MenuItem Text="NAAC Self Study Reports" Value="New Item"></asp:MenuItem>
+                           <asp:MenuItem Text="Consultancy Policy" Value="New Item"></asp:MenuItem>
+                    </asp:MenuItem>
+                    <asp:MenuItem Text="Student Corner" Value="Student Corner">
+                           <asp:MenuItem Text="Academics" Value="New Item">
+                               <asp:MenuItem Text="Admission" Value="Admission"></asp:MenuItem>
+                               <asp:MenuItem Text="Syllabi" Value="Syllabi"></asp:MenuItem>
+                               <asp:MenuItem Text="Question Bank" Value="Question Bank"></asp:MenuItem>
+                               <asp:MenuItem Text="Academic Calender" Value="Academic Calender"></asp:MenuItem>
+                               <asp:MenuItem Text="Paper Code List" Value="Paper Code List"></asp:MenuItem>
+                               <asp:MenuItem Text="e-Suvidha" Value="e-Suvidha"></asp:MenuItem>
+                           </asp:MenuItem>
+                           <asp:MenuItem Text="Examination " Value="New Item">
+                                <asp:MenuItem Text="Exam Time Table" Value="New Item"></asp:MenuItem>
+                                <asp:MenuItem Text="Online Result(College)" Value="New Item"></asp:MenuItem>
+                                <asp:MenuItem Text="Online Result (Student)" Value="New Item"></asp:MenuItem>
+                                <asp:MenuItem Text="Application For Photocopy /verification /challenge" Value="New Item"></asp:MenuItem>
+                                <asp:MenuItem Text="Result of verification Redressal" Value="New Item"></asp:MenuItem>
+                                <asp:MenuItem Text="Convocation" Value="New Item"></asp:MenuItem>
+                                <asp:MenuItem Text="Exam Report" Value="New Item"></asp:MenuItem>
+                                <asp:MenuItem Text="Online degree verification" Value="New Item"></asp:MenuItem>
+                                <asp:MenuItem Text="Copy case student entry form" Value="New Item"></asp:MenuItem>
+                                <asp:MenuItem Text="Previous exam question papers" Value="New Item"></asp:MenuItem>
+                               <asp:MenuItem Text="Unfair means(Copy Case)/ Lapses" Value="New Item"></asp:MenuItem>
+                           </asp:MenuItem>
+                           <asp:MenuItem Text="Faculties" Value="New Item">
+                               <asp:MenuItem Text="Financial Assistaance Schemes" Value="Financial Assistaance Schemes"></asp:MenuItem>
+                               <asp:MenuItem Text="Hostel Details" Value="Hostel Details"></asp:MenuItem>
+                               <asp:MenuItem Text="Health Services" Value="Health Services"></asp:MenuItem>
+                           </asp:MenuItem>
+                           <asp:MenuItem Text="Download Formats" Value="New Item">
+                               <asp:MenuItem Text="Examination forms" Value="Examination forms"></asp:MenuItem>
+                               <asp:MenuItem Text="Formats for colleges" Value="Formats for colleges"></asp:MenuItem>
+                               <asp:MenuItem Text="Formats for employee" Value="Formats for employee"></asp:MenuItem>
+                               <asp:MenuItem Text="Formats for Students" Value="Formats for Students"></asp:MenuItem>
+                               <asp:MenuItem Text="Stastical formats" Value="Stastical formats"></asp:MenuItem>
+                           </asp:MenuItem>
+                           <asp:MenuItem Text="Student Helpline" Value="New Item">
+                               <asp:MenuItem Text="Student Faciliation center" Value="Student Faciliation center"></asp:MenuItem>
+                           </asp:MenuItem>
+                           <asp:MenuItem Text="Student's Development" Value="New Item"></asp:MenuItem>
+                           <asp:MenuItem Text="E-Resource" Value="New Item">
+                               <asp:MenuItem Text="E-journals" Value="E-journals"></asp:MenuItem>
+                               <asp:MenuItem Text="NPTEL IIT Lectures" Value="NPTEL IIT Lectures"></asp:MenuItem>
+                               <asp:MenuItem Text="web of science" Value="web of science"></asp:MenuItem>
+                               <asp:MenuItem Text="NME-ICT" Value="NME-ICT"></asp:MenuItem>
+                               <asp:MenuItem Text="JGate" Value="JGate"></asp:MenuItem>
+                           </asp:MenuItem>
+                    </asp:MenuItem>
+                    <asp:MenuItem Text="Useful links" Value="Useful links">
+                           <asp:MenuItem Text="Events" Value="New Item"></asp:MenuItem>
+                           <asp:MenuItem Text="Tenders" Value="New Item"></asp:MenuItem>
+                           <asp:MenuItem Text="RTI" Value="New Item"></asp:MenuItem>
+                           <asp:MenuItem Text="Circulars" Value="New Item"></asp:MenuItem>
+                           <asp:MenuItem Text="Press Room" Value="New Item"></asp:MenuItem>
+                           <asp:MenuItem Text="Job Openings" Value="New Item">
+                               <asp:MenuItem Text="University" Value="University"></asp:MenuItem>
+                               <asp:MenuItem Text="Colleges/Institues" Value="Colleges/Institues"></asp:MenuItem>
+                               <asp:MenuItem Text="Apply Online" Value="Apply Online"></asp:MenuItem>
+                           </asp:MenuItem>
+                           <asp:MenuItem Text="Science Park" Value="New Item"></asp:MenuItem>
+                           <asp:MenuItem Text="Citizen Charter" Value="New Item"></asp:MenuItem>
+                           <asp:MenuItem Text="PBAS Proforma And API Details" Value="New Item"></asp:MenuItem>
+                           <asp:MenuItem Text="Other Links" Value="New Item"></asp:MenuItem>
+                    </asp:MenuItem>
+                    <asp:MenuItem Text="Contact Us" Value="Contact Us">
+                    </asp:MenuItem>
+                </Items>
+                <StaticHoverStyle  ForeColor="#3399FF" />
+                <StaticMenuItemStyle ForeColor="Black" HorizontalPadding="30px" VerticalPadding="15px" Font-Bold="False" Font-Size="20px" Font-Names="Calibri" CssClass="menuitem"/>
+            </asp:Menu>
+        </div>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+
+
+
+
+
+      <%--  footer section and quicl links of schools --------------------------------------------------------------%>
+
+   <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+     <div class="container" style="border-top:10px solid #0066FF; height:500px;">
+      
+         <table class="table">
+             <tr>
+                 <td colspan="2" style="font-size: 20px; font-weight: bold; color: #FFFFFF; border-bottom-style: solid; border-bottom-color: #FFFFFF; border-bottom-width:thin">Academic Schools/Departments</td>
+                 <td style="font-size: 20px; font-weight: bold; color: #FFFFFF; border-bottom-style: solid; border-bottom-color: #FFFFFF; border-bottom-width: thin">Student's Corner</td>
+                 <td class="auto-style2" style="font-size: 20px; font-weight: bold; color: #FFFFFF; border-bottom-style: solid; border-bottom-color: #FFFFFF; border-bottom-width: thin"> Links</td>
+                 <td style="font-size: 20px; font-weight: bold; color: #FFFFFF; border-bottom-style: solid; border-bottom-color: #FFFFFF; border-bottom-width: thin">About us </td>
+                 
+             </tr>
+             <tr>
+                 <td> Humanities and Inter-Disciplinary Studies</td>
+                 <td> Science and Technology </td>
+                 <td>Admission</td>
+                 <td class="auto-style2">Events</td>
+                 <td>University Brochure</td>
+             </tr>
+             <tr>
+                 <td>School Lang. Studies And Research center</td>
+                 <td>School of computer sciences</td>
+                 <td>Syllabi</td>
+                 <td class="auto-style2">Tenders</td>
+                 <td>How to reach</td>
+             </tr>
+             <tr>
+                 <td>School of art And Humanities</td>
+                 <td>School of mathematical sciences</td>
+                 <td>Examination result</td>
+                 <td class="auto-style2">press Room</td>
+                 <td>Email US<br />
+                 </td>
+             </tr>
+             <tr>
+                 <td>School of Social Science</td>
+                 <td>school of phisycal sciences</td>
+                 <td>Exam time table</td>
+                 <td class="auto-style2">circulars</td>
+               
+             </tr>
+             <tr>
+                 <td>School of education</td>
+                 <td>school of enviromental sciences</td>
+                 <td>Download formats</td>
+                 <td class="auto-style2">RTI</td>
+              
+             </tr>
+             <tr>
+                 <td>School of thought</td>
+                 <td>school of life sciences</td>
+                 <td>Student Healpline</td>
+                 <td class="auto-style2">Job OPenings</td>
+               
+             </tr>
+             <tr>
+                 <td>Commers and Managments</td>
+                 <td>school of chemical sciences</td>
+                 <td>Knowledge Resource Center</td>
+                 <td class="auto-style2">UIIC</td>
+                
+             </tr>
+             <tr>
+                 <td>school of managment studies</td>
+                 <td>Univ. Inst. of Chemical Technology</td>
+                 <td>Central T &amp; P cell</td>
+                 <td class="auto-style2">&nbsp;</td>
+                 
+             </tr>
+             <tr>
+                 <td>&nbsp;</td>
+                 <td>&nbsp;</td>
+                 <td>&nbsp;</td>
+                 <td class="auto-style2">&nbsp;</td>
+                 
+             </tr>
+         </table>
+       <div style="background-color:#3b5d9d; height:40px; width:auto;text-align:center;font-size:medium; color:white;padding-top:10px; margin-top:5%">
+             <pre>Privacy Statement|Disclaimer| Best viewed in IE6+, Mozilla 3+, Google Chrome at 1024 x 768 pixels (N) | Last Updated on: November 2021                          Copyright 2019 by KBCNMU, Jalgaon</pre>
+         </div>
+     </div>
+     
+    </form>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  

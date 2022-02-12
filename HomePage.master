@@ -1,0 +1,104 @@
+﻿<%@ Master Language="VB" MasterPageFile="~/Mainpage.Master" AutoEventWireup="false" CodeBehind="HomePage.master.vb" Inherits="NUM_website.HomePage" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <style type="text/css">
+     .searchbox {
+  padding:10px;
+   width:400px;
+   border:hidden;
+   font:20px arial bold;
+   float:left;
+   height:30px;
+
+    border-radius:30px;
+  /* border:5px solid #3399ff;*/
+
+}
+        .searchimg {
+            margin-right:20px;
+        }
+        .linkbutton {
+   color:#808080;
+    font-family:Calibri;
+    font-size:22px;
+    text-decoration:none;
+}
+     /*   .searchbardiv {
+    background-color:black;
+    height:100px;
+    width: auto;
+}*/
+    </style>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+     
+    <div class="container" style="border-left-style: none; border-bottom-style: solid; border-bottom-width: 10px; border-bottom-color: #0066FF;">
+    <div style="float:left; margin-top:3%"><input type="button" style="width:60px; height:60px; border-radius:50%; margin-top:200px; margin-left:350px; font-size:30px; background-image:linear-gradient(white,#f5f3f3,rgba(0,0,0,0.4)); font-weight: bolder; color:#38c0ff; font-family: 'Arial Black'; box-shadow:10px 10px 10px rgba(0,0,0,0.50)" value="»" /></div>
+ <div  style="float:left; margin-top:3%">  <img src="Images/img1.jpg" id="slider" class="img"></div>
+<div  style="float:left;margin-top:3%"><input type="button" style="width:60px; height:60px; border-radius:50%; margin-top:200px; margin-right:20px; font-size:30px;background-image:linear-gradient(white,#f5f3f3,rgba(0,0,0,0.4)); font-weight: bolder; color:#38c0ff; font-family: 'Arial Black'; box-shadow:10px 10px 10px rgba(0,0,0,0.50)" value="«" />
+  </div>
+      </div>
+   <script>
+       function first() {
+           document.getElementById("slider").src = "Images/img2.jpg";
+       }
+       function second() {
+           document.getElementById("slider").src = "Images/img3.jpg";
+       }
+       function third() {
+           document.getElementById("slider").src = "Images/img4.jpg";
+       }
+       function forth() {
+           document.getElementById("slider").src = "Images/img1.jpg";
+       }
+       setInterval(first, 3000);
+       setInterval(second, 6000);
+       setInterval(third, 9000);
+       setInterval(forth, 12000);
+   </script>
+
+
+ <%--        mission and vision logo and search bar& portal login-------------------------------------------------------------------%>
+         <div class="searchbardiv">
+        <table style="width:100%; height:auto; background-color:transparent">
+            <tr>
+               <td style="text-align:center" colspan="6">
+                    
+                        <asp:Image ID="mission" runat="server" ImageUrl="~/Images/mission.PNG" CssClass="miimg" />
+                        <asp:Button ID="hide" runat="server" Text="hide"  CssClass="showhidebutton"/>
+                        <asp:Button ID="show" runat="server" Text="show"  CssClass="showhidebutton" Visible="false"/>
+                    
+                </td>
+               
+            </tr>
+
+<tr>
+    <TD>
+       <div style="float: left; position: absolute; left:25%; display: inline; padding-top:5px;"> <img src="Images/loginlogo.jpg" style="width:40px;height:40px;"></div>
+     <div style="float: left; border-right-style: solid; border-right-width: medium; border-right-color: #C0C0C0; position: absolute; left:28%; display: inline; text-align: center; vertical-align: middle; height: 30px; padding-top: 10px;">  <asp:LinkButton ID="LinkButton1" runat="server" CssClass="linkbutton" PostBackUrl="~/Portallogin.aspx">Portal login</asp:LinkButton></div>
+        <div style="float:left; position: absolute; left:33%;padding-top: 10px;"> <asp:LinkButton ID="LinkButton2" runat="server" CssClass="linkbutton">Mail login</asp:LinkButton></div>
+         <div style="float: left; position: absolute; left:46%;margin-top:10px;font-family: Arial; font-size: 20px; font-weight: bold; margin-top: 20px;">अंतरी पेटवू ज्ञानज्योत</div>
+        <div style="float: left; position: absolute; left:64%;  width:500PX; background-color:rgb(192 192 192 / 0.80);  border-radius:30px;padding:7px"> <input type="text" class="searchbox" placeholder="search"><div style="float:right"><asp:Image ID="Image1" runat="server" ImageUrl="~/Images/searchlogo.png" Height="40px" Width="50px" CssClass="searchimg" /></div></div>
+    </TD>
+    
+   <%-- <td style="text-align:right;border-right:1px solid #0066FF" >
+   </td>
+     <td>
+        </td>
+     <td>
+        </td>
+     <td style="text-align:right">Search</td>
+     <td>
+       </td>--%>
+ 
+</tr>
+
+        </table>
+
+    </div>
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server" ></asp:ContentPlaceHolder>
+      <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+</asp:Content>
